@@ -1,0 +1,42 @@
+# Шаблон конфига пайплайна. Скопируй в config.yaml и поправь пути под свою машину.
+# config.yaml и config.local.yaml в git не попадают (.gitignore).
+tools:
+  # полные пути, если python/ffmpeg не в PATH
+  python: C:\Path\To\Python312\python.exe
+  ffmpeg: C:\Path\To\ffmpeg\bin\ffmpeg.exe
+  ffprobe: C:\Path\To\ffmpeg\bin\ffprobe.exe
+project:
+  name: МояПартия            # имя текущей партии исходников
+  footage_dir: D:\Drone\МояПартия   # папка с исходниками (только чтение!)
+paths:
+  references: references     # эталонные ролики для калибровки стиля
+  color_targets: color_targets
+  input: input
+  music: music
+  work: work                 # промежуточное (можно перезаписывать)
+  output: output             # результаты
+stage0:
+  scene_detect: {threshold: 27.0, min_scene_len_sec: 0.4}
+  motion: {sample_fps: 4, downscale_width: 480, max_seconds: 120}
+  color: {sample_max_px: 1000, shadows_pct: 25, highlights_pct: 75}
+music:
+  phrase_bars: 8
+  beats_per_bar: 4
+edit:
+  min_clip_sec: 2.5          # план должен «прожиться» (доктрина)
+  long_form: {aspect: '16:9', build_to_finale: true}
+  reels: {aspect: '9:16', hook_first: true, min_sec: 15, max_sec: 40}
+  vertical_crop: {mode: tracking, smoothing: 0.85}
+defects:
+  sharpness_var_min: 80.0
+  overexposed_pct: 2.0
+  underexposed_pct: 5.0
+  shake_threshold: 6.0
+color_grade:
+  point_A_dir: color_targets/point_A_photo   # «откуда идём» (фото-стиль)
+  target_dir: color_targets/target_drone     # «куда идём» (ведёт пайплайн цвета)
+  preview_variants: 3
+# Нативный звук (опционально): ключ Freesound держи в config.local.yaml:
+# sfx:
+#   freesound_client_id: <id>
+#   freesound_token: <token>
