@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "drone-edit",
   "description": "Автоматический монтаж дрон-видео: доктрина отбора, ритм по битам, цветокор, гейт качества. Полный пайплайн (python-скрипты): https://github.com/mssafonov-cmyk/drone-edit",
   "version": "1.0.0",
