@@ -1,0 +1,24 @@
+# СЕКРЕТЫ — никогда не публиковать
+config.local.yaml
+
+# личная конфигурация (пути машины) — публике даётся config.example.yaml
+config.yaml
+
+# контент: исходники, музыка (копирайт!), референсы, промежуточное, результаты
+input/
+music/
+references/
+color_targets/
+work/
+output/
+
+# локальное состояние Claude Code
+.claude/settings.local.json
+.claude/launch.json
+.claude/skills/drone-edit-workspace/
+
+# мусор
+*.log
+__pycache__/
+*.pyc
+Thumbs.db
