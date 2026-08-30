@@ -1,4 +1,4 @@
-# drone-edit — автоматический монтаж дрон-видео с Claude Code
+﻿# drone-edit — автоматический монтаж дрон-видео с Claude Code
 
 Пайплайн, который превращает папку исходников с дрона в готовые к публикации
 рилсы (9:16) и фильмы (16:9 / 4K): анализ брака, музыкальная сетка по битам,
@@ -43,7 +43,7 @@ production, in Russian.*
 Либо поставь только скилл (плейбук + доктрину) как плагин:
 
 ```bash
-/plugin marketplace add <your-github>/drone-edit
+/plugin marketplace add mssafonov-cmyk/drone-edit
 /plugin install drone-edit
 ```
 
