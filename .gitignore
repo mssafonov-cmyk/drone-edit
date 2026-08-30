@@ -5,12 +5,12 @@ config.local.yaml
 config.yaml
 
 # контент: исходники, музыка (копирайт!), референсы, промежуточное, результаты
-input/
-music/
-references/
-color_targets/
-work/
-output/
+/input/
+/music/
+/references/
+/color_targets/
+/work/
+/output/
 
 # локальное состояние Claude Code
 .claude/settings.local.json
