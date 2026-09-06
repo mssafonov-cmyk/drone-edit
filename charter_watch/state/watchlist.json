@@ -1,0 +1,33 @@
+{
+ "updated": "2026-09-06T07:40:00Z",
+ "note": "Лодки, которые проверяются ВРУЧНУЮ каждый прогон, если для их источника нет фетчера. Остальные — только скриптом и discovery раз в сутки.",
+ "priority": [
+  "thai-thunder",
+  "ecstasy",
+  "karysta",
+  "lola-2",
+  "shavasan",
+  "cloud-dancer-2",
+  "myemocean",
+  "proclus",
+  "gull",
+  "sparrow",
+  "mami",
+  "cotinga",
+  "joyous",
+  "kaya",
+  "cloud-dancer",
+  "k35"
+ ],
+ "references": [
+  "lola-2",
+  "karysta"
+ ],
+ "discovery_sources": [
+  "yachtreal (поиск по 9 окнам)",
+  "charteryacht24 (список катамаранов Пхукета)",
+  "boataround api search",
+  "12knots destination list"
+ ],
+ "last_discovery": "2026-09-06T0705Z"
+}

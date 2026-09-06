@@ -117,6 +117,9 @@ def is_candidate(boat):
 def detect(prev, cur):
     events = []
     pb, cb = prev.get("boats", {}), cur.get("boats", {})
+    # Baseline без верифицированных лодок: любое "появление" — заполнение, а не событие.
+    if not any(b.get("verified") for b in pb.values()):
+        return events
     prev_leaders = [score(b) for b in pb.values() if is_candidate(b) and b.get("verified")]
     top_prev = max(prev_leaders) if prev_leaders else 0
 
@@ -129,11 +132,14 @@ def detect(prev, cur):
         model = (b.get("model") or "").lower()
 
         if p is None:
+            if not b.get("verified"):
+                continue  # неверифицированная новая лодка — не событие, просто WATCH
             events.append(("NEW", bid, sc, "новая подходящая лодка в выдаче"))
         else:
             if not is_candidate(p) and p.get("booking_status") == "booked":
                 events.append(("RELEASED", bid, sc, "ранее занятая лодка освободилась в окне"))
-            elif not slots_in_window(p) and slots_in_window(b):
+            elif not slots_in_window(p) and slots_in_window(b) and p.get("verified") \
+                    and p.get("booking_status") in ("booked", "option"):
                 events.append(("RELEASED", bid, sc, "появились даты внутри 9–24 ноября"))
             pt, _ = total_price(p)
             if pt and total:
@@ -143,7 +149,7 @@ def detect(prev, cur):
                 elif pt > BUDGET_EUR >= total:
                     events.append(("PRICE_DROP", bid, sc, f"вошла в бюджет: €{pt:,.0f} → €{total:,.0f}"))
 
-        if b.get("verified") and sc >= top_prev + 3 and bid not in REFERENCE_IDS \
+        if top_prev and b.get("verified") and sc >= top_prev + 3 and bid not in REFERENCE_IDS \
                 and (p is None or score(p) < top_prev + 3):
             events.append(("BETTER_OPTION", bid, sc, f"score {sc} > лидер {top_prev}"))
 
