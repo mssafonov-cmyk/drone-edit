@@ -11,7 +11,25 @@
   "USD_EUR": 0.86044,
   "source": "frankfurter.dev (ECB) 2026-09-04"
  },
- "sources_checked": {},
+ "sources_checked": {
+  "charter.boats": "fail: 403 Cloudflare 'Attention Required' на charter.boats, www, api.charter.boats, /search (полные Chrome-заголовки не помогают)",
+  "charteryacht24": "partial: список без дат и карточки яхт с NauSYS-календарём — ok (46 катамаранов Пхукета); поиск с датами — HTTP 500; Price Summary (экстры) рендерится JS",
+  "yachtreal": "ok: поиск с датами по всем 9 окнам + карточки (rate-limit, часть карточек не открылась)",
+  "nausys_public": "fail: www.nausys.com таймаут; но NauSYS-данные получены через виджет charter-yacht.com (Island Spirit) и 12knots/CY24/YR",
+  "12knots": "ok: живой API onChangeDate по 30+ лодкам × 9 окон (available/booked/on hold, цены, экстры, депозит)",
+  "boataround": "ok: api.boataround.com/v1/search по 9 окнам (только доступные лодки, без экстр/депозита; по ряду лодок расходится с NauSYS — устаревшие данные)",
+  "island_spirit_charter-yacht.com": "ok (первичный): NauSYS-виджет search-check по 9 окнам + карточки флота",
+  "asia_marine": "partial: JS-челлендж для curl; страница Lola 2 через WebFetch — устаревший прайс 2023/24, календаря нет",
+  "dream_yacht_charter": "fail: 403 Cloudflare на всё",
+  "simpson_yacht_charter": "fail: страница Ecstasy 404, bareboat-катамаранов в Phuket-списке нет",
+  "fairview": "partial: спеки Maravelle/Ecstasy, цен нет (quote only)",
+  "sweet_dreamers / phuket-sailing-charter.com": "partial: спеки и 'from €/day' без сезона, календаря нет",
+  "sunsail": "ok: wp-json build-my-quote API, base_id 8022, Nov 2026",
+  "moorings": "ok: wp-json build-my-quote API, base_id 6628, Nov 2026",
+  "bebluesailing": "ok: недельные цены Sat–Sat для Moorings 4500L / Sunsail 454L",
+  "7piers / searadar / samboat / boatbookings": "partial: только статика, цен по датам нет (boatbookings pid38690/40815/47077 — 404)",
+  "yacht4less / yachtic / barbera / yachting.com / boat_lagoon_yachting / sail_in_asia": "fail: 403/404/redirect/reset"
+ },
  "boats": {
   "karysta": {
    "type": "catamaran",
@@ -42,25 +60,11 @@
    },
    "available_dates": [
     {
-     "from": "2026-11-09",
-     "to": "2026-11-16",
-     "days": 7,
-     "price_eur": 9471,
-     "source": "12knots NauSYS API (available) + Boataround"
-    },
-    {
-     "from": "2026-11-10",
-     "to": "2026-11-17",
-     "days": 7,
-     "price_eur": 9570,
-     "source": "12knots + Boataround"
-    },
-    {
      "from": "2026-11-11",
      "to": "2026-11-18",
      "days": 7,
      "price_eur": 9669,
-     "source": "12knots + Boataround"
+     "source": "12knots + Boataround; внутри свободного блока CY24 11–23.11"
     },
     {
      "from": "2026-11-12",
@@ -81,14 +85,14 @@
      "to": "2026-11-21",
      "days": 7,
      "price_eur": 9966,
-     "source": "12knots + Boataround"
+     "source": "CY24 + YachtReal Price Summary + 12knots + Boataround (Sat–Sat, бронируемая цена)"
     },
     {
      "from": "2026-11-15",
      "to": "2026-11-22",
      "days": 7,
      "price_eur": 10016,
-     "source": "12knots + Boataround"
+     "source": "12knots + Boataround; YR detail: 'Not available' для несубботнего старта"
     },
     {
      "from": "2026-11-16",
@@ -99,8 +103,8 @@
     }
    ],
    "booking_status": "available",
-   "base_price_eur": 9471,
-   "base_price_note": "Клиентская цена 12knots (NauSYS, −15% от листа €11,142) за 9–16.11; по окнам €9,471–10,066; 17–24.11 — Booked. Boataround: те же цены (−11…−16%).",
+   "base_price_eur": 9966,
+   "base_price_note": "Sat–Sat 14–21.11: €9,966 (лист €11,725, −15%) — подтверждено CY24, YachtReal, 12knots, Boataround. Календарь CY24: Booked 29.10–11.11 и 23.11–06.12 → реально свободен блок 11–23.11; 12knots показывает 9–16 и 10–17 'Available' — противоречит календарю, не учитываем. YR: для несубботних стартов цена 'Not available' → DYC, вероятно, только Sat–Sat.",
    "mandatory_extras": [
     {
      "name": "Handling fees (12knots: $40)",
@@ -111,10 +115,10 @@
      "eur": 470
     }
    ],
-   "mandatory_extras_complete": true,
+   "mandatory_extras_complete": false,
    "deposit_eur": 9000,
    "verified": true,
-   "verification_note": "Подтверждено 2 источниками с датами (12knots NauSYS-ответ 'Available' + Boataround API). Депозит €9,000 (€2,000 с damage waiver, 12knots). Сайт DYC — 403 Cloudflare. Итог 9–16.11 ≈ €9,976 ≤ €11,000.",
+   "verification_note": "Подтверждено 4 источниками (CY24 + YachtReal NauSYS-календарь, 12knots, Boataround). Итог 14–21.11 ≈ €10,471 (€9,966 + handling €35 + service pack & cleaning €470 по 12knots; YR Price Summary показывает obligatory 0 €, глобальный список DYC не привязан к базе). Депозит €9,000 (€2,000 с damage waiver). Сайт DYC — 403.",
    "penalties": [
     {
      "reason": "52 ft — тяжелее для bareboat, депозит €9,000",
@@ -168,47 +172,33 @@
      "to": "2026-11-16",
      "days": 7,
      "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
+     "source": "12knots 'On hold' + Boataround; CY24: 08–15.11 '0 €' (по запросу), Booked с 19.11"
     },
     {
      "from": "2026-11-10",
      "to": "2026-11-17",
      "days": 7,
      "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
+     "source": "12knots 'On hold' + Boataround; CY24: 08–15.11 '0 €' (по запросу), Booked с 19.11"
     },
     {
      "from": "2026-11-11",
      "to": "2026-11-18",
      "days": 7,
      "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
+     "source": "12knots 'On hold' + Boataround; CY24: 08–15.11 '0 €' (по запросу), Booked с 19.11"
     },
     {
      "from": "2026-11-12",
      "to": "2026-11-19",
      "days": 7,
      "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
-    },
-    {
-     "from": "2026-11-13",
-     "to": "2026-11-20",
-     "days": 7,
-     "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
-    },
-    {
-     "from": "2026-11-14",
-     "to": "2026-11-21",
-     "days": 7,
-     "price_eur": 10465,
-     "source": "12knots NauSYS: 'On hold' (опция) + Boataround: available"
+     "source": "12knots 'On hold' + Boataround; CY24: 08–15.11 '0 €' (по запросу), Booked с 19.11"
     }
    ],
    "booking_status": "option",
    "base_price_eur": 10465,
-   "base_price_note": "€10,465/нед без скидки (12knots + Boataround, все окна). 12knots: старты 9–14.11 'On hold. Ask for availability', старты 15–17.11 — Booked. Boataround показывает все 9 окон (вероятно, устаревшее).",
+   "base_price_note": "€10,465/нед без скидки (12knots, Boataround). Календарь CY24: Booked 31.10–09.11 и 19.11–16.12 → свободен только блок 9–19.11 (окна 9–16 … 12–19); 08–15.11 показан как '0 €' (цена по запросу). 12knots: старты 9–14 'On hold', 15+ Booked.",
    "mandatory_extras": [
     {
      "name": "Final cleaning (12knots: $291)",
@@ -218,7 +208,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 5000,
    "verified": true,
-   "verification_note": "2 источника с датами (12knots NauSYS + Boataround), но статус расходится: 12knots — опция/hold на 9–14.11, booked с 15.11. Сайт Asia Marine: прайс устаревший (сезоны 2023/24, Shoulder 1.11–19.12 €10,465), календаря нет. Итог ≈ €10,715.",
+   "verification_note": "3 источника (CY24 календарь, 12knots, Boataround); статус — опция/по запросу, не подтверждённая доступность. Asia Marine: прайс устаревший, календаря нет. Итог ≈ €10,715.",
    "penalties": [],
    "source_ids": {
     "catamarans.com": "36800",
@@ -267,15 +257,15 @@
      "from": "2026-11-14",
      "to": "2026-11-21",
      "days": 7,
-     "price_eur": 9765,
-     "source": "12knots NauSYS API 'Available' + Boataround"
+     "price_eur": 9476,
+     "source": "CY24 календарь €9,476 (−10%) + YR список + 12knots (€9,765) + Boataround"
     },
     {
      "from": "2026-11-15",
      "to": "2026-11-22",
      "days": 7,
      "price_eur": 9765,
-     "source": "12knots + Boataround"
+     "source": "12knots 'Available' + Boataround"
     },
     {
      "from": "2026-11-16",
@@ -293,8 +283,8 @@
     }
    ],
    "booking_status": "available",
-   "base_price_eur": 9765,
-   "base_price_note": "Лист €10,500, −7% → €9,765 (12knots, старты 14–17.11). Старты 9–13.11 на 12knots — Booked; Boataround показывает все 9 окон (€9,002–9,453) — расхождение, верить 12knots.",
+   "base_price_eur": 9476,
+   "base_price_note": "Sat–Sat 14–21.11: €9,476 (лист €10,500, −10%) по CY24; 12knots для стартов 14–17.11 даёт €9,765 (−7%). Календарь CY24: 07–14.11 Booked, 21–28.11 свободна (€9,476), 28.11 Booked. CY24 указывает 5+1 кают / 10+2 berths (Quintet).",
    "mandatory_extras": [
     {
      "name": "Final cleaning (12knots: $291)",
@@ -308,7 +298,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 7000,
    "verified": true,
-   "verification_note": "Та же лодка, что 'Ecstasy' в baseline (12knots id 61664 / Sedna 60636), переименована в Maravelle. 2 источника с датами на 14–24.11. Fairview: цен нет (quote only). Итог ≈ €10,020.",
+   "verification_note": "Та же лодка, что 'Ecstasy' в baseline (12knots id 61664 / Sedna 60636), теперь 'Maravelle' (Fairview, Ao Po). 4 источника на 14–21.11. Итог ≈ €9,731 (с уборкой €250 + генератор €5). Депозит €7,000 (12knots static).",
    "penalties": [],
    "source_ids": {
     "12knots": "61664",
@@ -373,7 +363,7 @@
      "source": "Island Spirit + 12knots + Boataround"
     }
    ],
-   "booking_status": "available",
+   "booking_status": "option",
    "base_price_eur": 7126,
    "base_price_note": "Лист €7,980, −10.7% → €7,126 (виджет оператора и 12knots совпадают). Старты 9–14.11 — Booked (12knots; в виджете оператора не выдаётся).",
    "mandatory_extras": [
@@ -385,7 +375,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 5700,
    "verified": true,
-   "verification_note": "Первичный источник (виджет NauSYS оператора) + 12knots + Boataround. Итог ≈ €7,376. Минус: 42 ft, 2 форпика — для 9 человек тесно; salon berth = 1 (по Boataround).",
+   "verification_note": "Виджет оператора (NauSYS), 12knots, Boataround и список YachtReal показывают доступность 15–22/16–23/17–24 по €7,126–7,171. НО календарь CY24 содержит перекрывающиеся блоки 'Booked' 03–20.11 и 15–30.11 (перекрытие → один из них, вероятно, опция), а детальная YR-страница даёт 'Send Inquiry' без цены. Статус консервативно 'option' — требует запроса оператору. Итог ≈ €7,376. Минус для 9 чел.: 42 ft, 2 форпика-сингла.",
    "penalties": [
     {
      "reason": "42 ft, 2 форпика-сингла — тесно для 9",
@@ -434,72 +424,51 @@
    },
    "available_dates": [
     {
-     "from": "2026-11-09",
-     "to": "2026-11-16",
-     "days": 7,
-     "price_eur": 9471,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
-    },
-    {
-     "from": "2026-11-10",
-     "to": "2026-11-17",
-     "days": 7,
-     "price_eur": 9570,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
-    },
-    {
      "from": "2026-11-11",
      "to": "2026-11-18",
      "days": 7,
      "price_eur": 9669,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "12knots 'On hold' + Boataround; свободный блок CY24 11–24.11"
     },
     {
      "from": "2026-11-12",
      "to": "2026-11-19",
      "days": 7,
      "price_eur": 9768,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "12knots 'On hold' + Boataround"
     },
     {
      "from": "2026-11-13",
      "to": "2026-11-20",
      "days": 7,
      "price_eur": 9867,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "12knots 'On hold' + Boataround"
     },
     {
      "from": "2026-11-14",
      "to": "2026-11-21",
      "days": 7,
      "price_eur": 9966,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "CY24 календарь (бронируемая цена) + YR список + Boataround; 12knots — 'On hold'"
     },
     {
      "from": "2026-11-15",
      "to": "2026-11-22",
      "days": 7,
      "price_eur": 10016,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "12knots 'On hold' + Boataround"
     },
     {
      "from": "2026-11-16",
      "to": "2026-11-23",
      "days": 7,
      "price_eur": 10066,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
-    },
-    {
-     "from": "2026-11-17",
-     "to": "2026-11-24",
-     "days": 7,
-     "price_eur": 10116,
-     "source": "12knots NauSYS: 'On hold' + Boataround: available"
+     "source": "12knots 'On hold' + Boataround"
     }
    ],
    "booking_status": "option",
-   "base_price_eur": 9471,
-   "base_price_note": "Лист €11,142–11,900, −15% → €9,471–10,116 (12knots). Все 9 окон на 12knots — 'On hold. Ask for availability' (опция), Boataround — available.",
+   "base_price_eur": 9966,
+   "base_price_note": "Sat–Sat 14–21.11: €9,966 (лист €11,725, −15%) по CY24/YR/Boataround; 12knots — 'On hold' на все окна. Календарь CY24: Booked 29.10–11.11 и 24–28.11.",
    "mandatory_extras": [
     {
      "name": "Handling fees (12knots: $40)",
@@ -510,10 +479,10 @@
      "eur": 470
     }
    ],
-   "mandatory_extras_complete": true,
+   "mandatory_extras_complete": false,
    "deposit_eur": 9000,
    "verified": true,
-   "verification_note": "2 источника с датами, но 12knots показывает опцию на ВСЕ окна — вероятно, лодка под предварительной бронью. Оператор — DYC (уточнено по 12knots/Boataround). Итог ≈ €9,976+.",
+   "verification_note": "CY24/YR календарь показывает бронируемую цену на 14–21, 12knots — опцию. Статус консервативно 'option'. Итог ≈ €10,471. Депозит €9,000.",
    "penalties": [
     {
      "reason": "52 ft, депозит €9,000",
@@ -607,7 +576,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 9000,
    "verified": true,
-   "verification_note": "2 источника с датами. Обязательный итог €11,215 > €11,000 → формально вне бюджета; кандидат только при скидке/торге или 6-дневном чартере.",
+   "verification_note": "2 источника с датами. Обязательный итог €11,215 > €11,000 → формально вне бюджета; кандидат только при скидке/торге или 6-дневном чартере. CY24/YR календарь: 14–21 €10,710, 21–28 €11,093 (−15%).",
    "penalties": [
     {
      "reason": "50 ft, депозит €9,000",
@@ -658,73 +627,82 @@
      "to": "2026-11-16",
      "days": 7,
      "price_eur": 6200,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-10",
      "to": "2026-11-17",
      "days": 7,
      "price_eur": 6200,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-11",
      "to": "2026-11-18",
      "days": 7,
      "price_eur": 6067,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-12",
      "to": "2026-11-19",
      "days": 7,
      "price_eur": 5934,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-13",
      "to": "2026-11-20",
      "days": 7,
      "price_eur": 5846,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-14",
      "to": "2026-11-21",
      "days": 7,
      "price_eur": 5775,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-15",
      "to": "2026-11-22",
      "days": 7,
      "price_eur": 5722,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-16",
      "to": "2026-11-23",
      "days": 7,
      "price_eur": 5686,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     },
     {
      "from": "2026-11-17",
      "to": "2026-11-24",
      "days": 7,
      "price_eur": 5669,
-     "source": "Island Spirit NauSYS-виджет + Boataround"
+     "source": "Island Spirit виджет + YR список + Boataround; CY24: 14–21 €5,775, Booked с 25.11"
     }
    ],
    "booking_status": "available",
    "base_price_eur": 5669,
    "base_price_note": "€5,669–6,200/нед по окнам (виджет оператора; Boataround €5,486–5,942).",
-   "mandatory_extras": [],
+   "mandatory_extras": [
+    {
+     "name": "Final cleaning (YR obligatory)",
+     "eur": 250
+    },
+    {
+     "name": "TES levy €7/гость/день × 9 × 7 (YR)",
+     "eur": 441
+    }
+   ],
    "mandatory_extras_complete": false,
    "deposit_eur": null,
    "verified": true,
-   "verification_note": "Первичный источник (виджет оператора) + Boataround. Тип 4 кают (double?) не подтверждён; 2 WC на 9 чел., без генератора и кондиционера. Экстры/депозит не опубликованы.",
+   "verification_note": "Первичный источник (виджет оператора) + Boataround. Тип 4 кают (double?) не подтверждён; 2 WC на 9 чел., без генератора и кондиционера. Экстры/депозит не опубликованы. CY24/YR: cleaning €250, TES levy €7/гость/день, damage waiver €40/день (обязательность не ясна).",
    "penalties": [
     {
      "reason": "41 ft, 2 WC, нет генератора и AC — слабый комфорт для 9",
@@ -809,11 +787,20 @@
    "booking_status": "available",
    "base_price_eur": 5669,
    "base_price_note": "€5,669–5,846/нед (старты 9–13.11); с 14.11 не выдаётся.",
-   "mandatory_extras": [],
+   "mandatory_extras": [
+    {
+     "name": "Final cleaning (YR obligatory)",
+     "eur": 250
+    },
+    {
+     "name": "TES levy €7/гость/день × 9 × 7 (YR)",
+     "eur": 441
+    }
+   ],
    "mandatory_extras_complete": false,
    "deposit_eur": null,
    "verified": true,
-   "verification_note": "Виджет оператора + Boataround. В карточке оператора watermaker НЕ указан (у сестры Fortunate Sun указан). 2 WC, нет генератора/AC.",
+   "verification_note": "Виджет оператора + Boataround. В карточке оператора watermaker НЕ указан (у сестры Fortunate Sun указан). 2 WC, нет генератора/AC. CY24: 21–30.11 Booked.",
    "penalties": [
     {
      "reason": "41 ft, 2 WC, нет генератора и AC",
@@ -934,7 +921,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 4000,
    "verified": true,
-   "verification_note": "12knots + Boataround. Watermaker в описании 12knots не найден. 40 ft / 2 WC — слабый вариант для 9.",
+   "verification_note": "12knots + Boataround. Watermaker в описании 12knots не найден. 40 ft / 2 WC — слабый вариант для 9. CY24: 07–14 €5,845, 21–30.11 Booked.",
    "penalties": [
     {
      "reason": "40 ft, 2 WC, 2017",
@@ -1011,7 +998,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 8000,
    "verified": true,
-   "verification_note": "12knots + Boataround (только окна 9–16 и 10–17). 2017 год, депозит €8,000.",
+   "verification_note": "12knots + Boataround (только окна 9–16 и 10–17). 2017 год, депозит €8,000. CY24: 07–14 €5,563 (−15%), 17–30.11 Booked.",
    "penalties": [
     {
      "reason": "2017 год, депозит €8,000",
@@ -1142,7 +1129,7 @@
    "mandatory_extras_complete": false,
    "deposit_eur": 5500,
    "verified": true,
-   "verification_note": "12knots NauSYS: Booked на все 9 окон; Boataround: отсутствует в ноябрьской выдаче (есть в контроле февр. 2027). Оператор по 12knots — Asia Marine; со страницы charter-yacht.com удалена (404).",
+   "verification_note": "12knots NauSYS: Booked на все 9 окон; Boataround: отсутствует в ноябрьской выдаче (есть в контроле февр. 2027). Оператор по 12knots — Asia Marine; со страницы charter-yacht.com удалена (404). CY24 календарь: 07–16.11 и 17.11–02.12 Booked.",
    "penalties": [],
    "source_ids": {
     "nausys_yacht": "34636232",
@@ -1191,7 +1178,7 @@
    "mandatory_extras_complete": false,
    "deposit_eur": 4000,
    "verified": true,
-   "verification_note": "12knots NauSYS: Booked на все 9 окон; виджет Island Spirit не выдаёт ни в одном окне; Boataround — отсутствует. Лист €7,970/нед.",
+   "verification_note": "12knots NauSYS: Booked на все 9 окон; виджет Island Spirit не выдаёт ни в одном окне; Boataround — отсутствует. Лист €7,970/нед. CY24: 31.10–15.11 и 17.11–02.12 Booked.",
    "penalties": [],
    "source_ids": {
     "nausys_yacht": "34636229",
@@ -1240,7 +1227,7 @@
    "mandatory_extras_complete": false,
    "deposit_eur": 8000,
    "verified": true,
-   "verification_note": "12knots NauSYS: Booked на все 9 окон (лист €8,007–8,553, депозит €8,000); Boataround — отсутствует в ноябре. Оператор — Dream Yacht Charter (по 12knots company id).",
+   "verification_note": "12knots NauSYS: Booked на все 9 окон (лист €8,007–8,553, депозит €8,000); Boataround — отсутствует в ноябре. Оператор — Dream Yacht Charter (по 12knots company id). CY24: 31.10–13.11, 11–18, 21–28.11 Booked.",
    "penalties": [],
    "source_ids": {
     "yachtic": "39465",
@@ -1439,7 +1426,7 @@
    "mandatory_extras_complete": false,
    "deposit_eur": 6000,
    "verified": true,
-   "verification_note": "12knots NauSYS: старты 9–13.11 'On hold', с 14.11 Booked; Boataround — available €8,400 (расхождение). 8 berths < 9 в любом случае.",
+   "verification_note": "12knots NauSYS: старты 9–13.11 'On hold', с 14.11 Booked; Boataround — available €8,400 (расхождение). 8 berths < 9 в любом случае. CY24: 16–25.11 Booked.",
    "penalties": [],
    "source_ids": {
     "12knots": "41229",
@@ -1975,7 +1962,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 5000,
    "verified": true,
-   "verification_note": "Не bareboat (обязательный шкипер) и 8 berths.",
+   "verification_note": "Не bareboat (обязательный шкипер) и 8 berths. YR: Skipper (Obligatory) €175/день + питание — подтверждает crewed-only.",
    "penalties": [],
    "source_ids": {
     "12knots": "43166",
@@ -2092,7 +2079,7 @@
    "mandatory_extras_complete": true,
    "deposit_eur": 1500,
    "verified": true,
-   "verification_note": "Свободна на все окна, но €13,750 с уборкой > бюджета.",
+   "verification_note": "Свободна на все окна, но €13,750 с уборкой > бюджета. CY24/YR: 07–14, 14–21, 21–28.11 по €13,500; YR: 'Skipper (Obligatory) 0 €' — возможно тоже crewed.",
    "penalties": [
     {
      "reason": "52 ft",
@@ -2268,6 +2255,240 @@
    ],
    "timestamp": "2026-09-06T07:05:00Z",
    "role": "rejected: > бюджета"
+  },
+  "lady-alla": {
+   "type": "catamaran",
+   "bareboat": true,
+   "model": "Fountaine Pajot Lipari 41",
+   "yacht_name": "Lady Alla",
+   "year": 2017,
+   "length_ft": 41,
+   "guest_cabins_double": 4,
+   "extra_cabins": null,
+   "total_berths_incl_saloon": 9,
+   "saloon_berth": null,
+   "toilets": 2,
+   "base": "Ao Po Grand Marina, Phuket",
+   "operator": "неизвестен",
+   "operator_rating": null,
+   "condition_score": null,
+   "watermaker": true,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "electric_winch": null,
+    "inverter": null,
+    "large_fridge": null,
+    "good_swim_platform": null,
+    "flybridge_or_good_cockpit": null,
+    "solar": true
+   },
+   "available_dates": [
+    {
+     "from": "2026-11-14",
+     "to": "2026-11-21",
+     "days": 7,
+     "price_eur": 10800,
+     "source": "CY24/YR календарь"
+    }
+   ],
+   "booking_status": "available",
+   "base_price_eur": 10800,
+   "base_price_note": "€10,800/нед все недели ноября (CY24/YR); YR: 'Skipper (Obligatory) 0 €'.",
+   "mandatory_extras": [
+    {
+     "name": "Final cleaning",
+     "eur": 100
+    }
+   ],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "verified": true,
+   "verification_note": "41 ft / 2 WC за €10,800 — цена явно не bareboat-уровня (вероятно crewed). Не интересна.",
+   "penalties": [
+    {
+     "reason": "41 ft, 2 WC, 2017, цена вне рынка",
+     "points": 20
+    }
+   ],
+   "source_ids": {
+    "cy24": "7974",
+    "yachtreal": "12843"
+   },
+   "urls": [
+    "https://charteryacht24.com/en/yacht/lipari-41-lady-alla-phuket-ao-po-grand-marina-thailand/7974"
+   ],
+   "timestamp": "2026-09-06T07:05:00Z",
+   "role": "rejected: 41 ft/2 WC, цена вне рынка"
+  },
+  "kristy-b": {
+   "type": "catamaran",
+   "bareboat": true,
+   "model": "Matrix Vision 450",
+   "yacht_name": "Kristy B (в NauSYS 'Leopard')",
+   "year": 2014,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": null,
+   "total_berths_incl_saloon": 8,
+   "saloon_berth": null,
+   "toilets": 4,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Asia Marine",
+   "operator_rating": null,
+   "condition_score": null,
+   "watermaker": true,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "electric_winch": null,
+    "inverter": true,
+    "large_fridge": null,
+    "good_swim_platform": null,
+    "flybridge_or_good_cockpit": null,
+    "solar": null
+   },
+   "available_dates": [
+    {
+     "from": "2026-11-09",
+     "to": "2026-11-16",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-10",
+     "to": "2026-11-17",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-11",
+     "to": "2026-11-18",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-12",
+     "to": "2026-11-19",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-13",
+     "to": "2026-11-20",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-14",
+     "to": "2026-11-21",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-15",
+     "to": "2026-11-22",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-16",
+     "to": "2026-11-23",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    },
+    {
+     "from": "2026-11-17",
+     "to": "2026-11-24",
+     "days": 7,
+     "price_eur": 8000,
+     "source": "CY24/YR + Boataround"
+    }
+   ],
+   "booking_status": "available",
+   "base_price_eur": 8000,
+   "base_price_note": null,
+   "mandatory_extras": [
+    {
+     "name": "Final cleaning (12knots: $291)",
+     "eur": 250
+    }
+   ],
+   "mandatory_extras_complete": true,
+   "deposit_eur": null,
+   "verified": true,
+   "verification_note": "8 berths < 9; 2014 год.",
+   "penalties": [
+    {
+     "reason": "2014 год",
+     "points": 6
+    }
+   ],
+   "source_ids": {
+    "cy24": "5691",
+    "yachtreal": "10128",
+    "boataround": "matrix-vision-450-kristy-b"
+   },
+   "urls": [
+    "https://charteryacht24.com/en/yacht/matrix-vision-450-leopard-phuket-yacht-haven-marina-thailand/5691"
+   ],
+   "timestamp": "2026-09-06T07:05:00Z",
+   "role": "rejected: 8 berths"
+  },
+  "kaya": {
+   "type": "catamaran",
+   "bareboat": true,
+   "model": "Island Spirit 410",
+   "yacht_name": "Kaya",
+   "year": 2022,
+   "length_ft": 41,
+   "guest_cabins_double": 4,
+   "extra_cabins": null,
+   "total_berths_incl_saloon": 9,
+   "saloon_berth": null,
+   "toilets": 2,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Island Spirit Yacht Charter",
+   "operator_rating": null,
+   "condition_score": null,
+   "watermaker": true,
+   "equipment": {
+    "generator": null,
+    "air_conditioning": null,
+    "electric_winch": null,
+    "inverter": null,
+    "large_fridge": null,
+    "good_swim_platform": null,
+    "flybridge_or_good_cockpit": null,
+    "solar": null
+   },
+   "available_dates": [],
+   "booking_status": "booked",
+   "base_price_eur": null,
+   "base_price_note": null,
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "verified": true,
+   "verification_note": "CY24 календарь: 07–14 €7,160, 14–29.11 Booked; виджет Island Spirit не выдаёт в окне.",
+   "penalties": [],
+   "source_ids": {
+    "nausys_yacht": "34636228",
+    "cy24": "4232"
+   },
+   "urls": [
+    "https://charter-yacht.com/yacht-34636228/"
+   ],
+   "timestamp": "2026-09-06T07:05:00Z",
+   "role": null
   }
  }
 }
