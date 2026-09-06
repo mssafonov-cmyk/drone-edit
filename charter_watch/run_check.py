@@ -28,6 +28,7 @@ WINDOWS = [((WINDOW[0] + timedelta(d)).isoformat(), (WINDOW[0] + timedelta(d + 7
 
 
 def load_fetchers(only=None):
+    sys.path.insert(0, str(ROOT / "sources"))  # чтобы фетчеры могли import _common
     out = []
     for f in sorted((ROOT / "sources").glob("*.py")):
         if f.name.startswith("_"):

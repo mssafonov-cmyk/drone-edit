@@ -1,0 +1,177 @@
+{
+ "_note": "Маппинг boat_id → идентификаторы в источниках. 12knots — канонический URL страницы (POST onChangeDate идёт на него); cy24 — путь после /en/yacht/; yachtreal и islandspirit — имя яхты как в выдаче (без учёта регистра); boataround — slug из api search.",
+ "karysta": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-52-f-6-2-cab-karysta-28603/",
+  "cy24": "catamaran-karysta/1465",
+  "yachtreal": "KARYSTA",
+  "boataround": "lagoon-52-f-karysta"
+ },
+ "lola-2": {
+  "12knots": "https://12knots.com/en/yacht-charter/fountaine-pajot-saona-47-5-cab-lola-2-41223/",
+  "cy24": "catamaran-lola-2/5690",
+  "yachtreal": "Lola 2",
+  "boataround": "fountaine-pajot-saona-47-lola-2"
+ },
+ "ecstasy": {
+  "12knots": "https://12knots.com/en/yacht-charter/saona-47-ecstasy-61664/",
+  "cy24": "catamaran-maravelle/6908",
+  "yachtreal": "Maravelle",
+  "boataround": "fountaine-pajot-saona-47-maravelle"
+ },
+ "thai-thunder": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-42-4-2-cab-thai-thunder-38201/",
+  "cy24": "catamaran-thai-thunder/4234",
+  "yachtreal": "Thai Thunder",
+  "boataround": "lagoon-42-thai-thunder",
+  "islandspirit": "Thai Thunder"
+ },
+ "gull": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-52-f-6-2-cab-gull-27688/",
+  "cy24": "catamaran-gull/1302",
+  "yachtreal": "GULL",
+  "boataround": "lagoon-52-f-gull"
+ },
+ "guiraca": {
+  "12knots": "https://12knots.com/en/yacht-charter/fountaine-pajot-saba-50-6-2-cab-guiraca-28987/",
+  "cy24": "catamaran-guiraca/1502",
+  "yachtreal": "GUIRACA",
+  "boataround": "fountaine-pajot-saba-50-guiraca"
+ },
+ "shavasan": {
+  "12knots": "https://12knots.com/en/yacht-charter/fountaine-pajot-elba-45-4-2-cab-shavasan-38420/",
+  "cy24": "catamaran-shavasan/4337",
+  "yachtreal": "Shavasan",
+  "islandspirit": "Shavasan"
+ },
+ "cloud-dancer-2": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-43-4-1-cab-cloud-dancer-2-63408/",
+  "cy24": "catamaran-cloud-dancer-2/6595",
+  "yachtreal": "Cloud Dancer 2",
+  "boataround": "lagoon-43-cloud-dancer-2"
+ },
+ "cloud-dancer": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-42-4-1-cab-cloud-dancer-37009/",
+  "cy24": "catamaran-cloud-dancer/3684",
+  "yachtreal": "Cloud Dancer",
+  "boataround": "lagoon-42-cloud-dancer"
+ },
+ "myemocean": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-450-s-4-2-cab-myemocean-61353/",
+  "cy24": "catamaran-myemocean/6824",
+  "yachtreal": "Myemocean",
+  "boataround": "lagoon-450-s-myemocean"
+ },
+ "proclus": {
+  "12knots": "https://12knots.com/en/yacht-charter/bali-45-4-2-cab-proclus-db-31022/",
+  "cy24": "catamaran-proclus-db/2029",
+  "yachtreal": "PROCLUS_DB",
+  "boataround": "bali-45-proclus"
+ },
+ "sparrow": {
+  "12knots": "https://12knots.com/en/yacht-charter/bali-45-4-2-cab-sparrow-27469/",
+  "cy24": "catamaran-sparrow/1251",
+  "yachtreal": "SPARROW",
+  "boataround": "bali-45-sparrow"
+ },
+ "mami": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-42-4-2-cab-mami-38200/",
+  "cy24": "catamaran-mami/4233",
+  "yachtreal": "Mami",
+  "boataround": "lagoon-42-mami-1",
+  "islandspirit": "Mami"
+ },
+ "cotinga": {
+  "12knots": "https://12knots.com/en/yacht-charter/bali-41-4-2-cab-cotinga-28989/",
+  "cy24": "catamaran-cotinga/1503",
+  "yachtreal": "COTINGA",
+  "boataround": "bali-41-cotinga"
+ },
+ "joyous": {
+  "12knots": "https://12knots.com/en/yacht-charter/bali-42-4-1-cab-joyous-41229/",
+  "cy24": "catamaran-joyous/5694",
+  "yachtreal": "Joyous",
+  "boataround": "bali-42-joyous"
+ },
+ "kaya": {
+  "cy24": "catamaran-kaya/4232",
+  "yachtreal": "Kaya",
+  "islandspirit": "Kaya"
+ },
+ "k35": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-40-4-2-cab-k-35-37006/",
+  "cy24": "catamaran-k-35/3682",
+  "yachtreal": "K-35",
+  "boataround": "lagoon-40-k-35"
+ },
+ "kinara": {
+  "12knots": "https://12knots.com/en/yacht-charter/fountaine-pajot-lucia-40-4-cab-kinara-41221/",
+  "yachtreal": "Kinara",
+  "boataround": "fountaine-pajot-lucia-40-kinara"
+ },
+ "fortunate-sun": {
+  "cy24": "catamaran-fortunate-sun/4230",
+  "yachtreal": "Fortunate Sun",
+  "boataround": "island-spirit-410-fortunate-sun",
+  "islandspirit": "Fortunate Sun"
+ },
+ "melinda-jane": {
+  "cy24": "catamaran-melinda-jane/4231",
+  "yachtreal": "Melinda Jane",
+  "boataround": "island-spirit-410-melinda-jane",
+  "islandspirit": "Melinda Jane"
+ },
+ "shana": {
+  "cy24": "catamaran-shana/4235",
+  "yachtreal": "Shana",
+  "islandspirit": "Shana"
+ },
+ "chammak-challo": {
+  "cy24": "catamaran-chammak-challo/5714",
+  "yachtreal": "Chammak Challo",
+  "islandspirit": "Chammak Challo"
+ },
+ "sealion": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-52-f-4-2-cab-sealion-41276/",
+  "cy24": "catamaran-sealion/5715",
+  "yachtreal": "Sealion"
+ },
+ "ms-chief": {
+  "12knots": "https://12knots.com/en/yacht-charter/leopard-50-ms-chief-43166/",
+  "yachtreal": "Ms. Chief",
+  "boataround": "leopard-50-ms-chief"
+ },
+ "lady-alla": {
+  "yachtreal": "Lady Alla"
+ },
+ "kristy-b": {
+  "yachtreal": "Leopard",
+  "boataround": "matrix-vision-450-kristy-b"
+ },
+ "lagoon-51-2025-yacht-haven": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-51-6-1-cab-joyous-2-61187/",
+  "cy24": "catamaran-joyous-2/6773",
+  "yachtreal": "Joyous 2"
+ },
+ "lagoon-52f-2016-yacht-haven": {
+  "12knots": "https://12knots.com/en/yacht-charter/lagoon-52-f-6-2-cab-colombo-28134/",
+  "yachtreal": "COLOMBO"
+ },
+ "dyc-bali-4-8-thailand": {
+  "12knots": "https://12knots.com/en/yacht-charter/bali-48-6-cab-argos-29431/",
+  "yachtreal": "ARGOS"
+ },
+ "sunsail-454l-phuket": {
+  "sunsail": [
+   "46X4E",
+   "46X4K"
+  ],
+  "boataround": "leopard-45-sunsail-24-6"
+ },
+ "moorings-4500l-phuket": {
+  "moorings": [
+   "46X4E",
+   "46X4K"
+  ],
+  "boataround": "leopard-45-moorings-23-6"
+ }
+}
