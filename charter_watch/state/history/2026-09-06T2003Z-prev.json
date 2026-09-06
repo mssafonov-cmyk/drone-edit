@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
- "generated_at": "2026-09-06T20:03:24Z",
- "run_id": "lean-2026-09-06T2003Z",
+ "generated_at": "2026-09-06T16:04:09Z",
+ "run_id": "lean-2026-09-06T1604Z",
  "window": {
   "from": "2026-11-09",
   "to": "2026-11-24"
@@ -154,13 +154,13 @@
     "https://charteryacht24.com/en/yacht/catamaran-karysta/1465",
     "https://www.yachtreal.com/en/yacht/lagoon-52-f-karysta-phuket-yacht-haven-marina-thailand/7854"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "reference",
    "source_notes": {
     "charteryacht24": "CY24 календарь: 29.10-11.11:Booked; 14.11-21.11:9.966 € 11.725 € -15%; 23.11-06.12:Booked",
-    "yachtreal": "YachtReal поиск: 11-14:9966 11-16:10066",
-    "boataround": "Boataround search: 11-09:9471 11-10:9570 11-11:9669 11-12:9768 11-13:10361 11-14:9966 11-15:10016 11-16:10066",
-    "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:o:9471.0 11-10:o:9570.0 11-11:o:9669.0 11-12:o:9768.0 11-13:o:9867.0 11-14:o:9966.0 11-15:o:10016.0 11-16:a:10065.0 11-17:b:10115.0"
+    "yachtreal": "YachtReal поиск: 11-14:9966 11-15:10016 11-16:10066",
+    "boataround": "Boataround search: 11-09:9471 11-10:10049 11-11:9669 11-12:9768 11-13:9867 11-14:10465 11-15:10016 11-16:10569",
+    "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:a:9471.0 11-10:a:9570.0 11-11:a:9669.0 11-12:a:9768.0 11-13:a:9867.0 11-14:a:9966.0 11-15:a:10016.0 11-16:a:10065.0 11-17:b:10115.0"
    }
   },
   "lola-2": {
@@ -261,7 +261,7 @@
     "http://asia-marine.net/charter/bareboat/catamaran/overnight/saona-47-lola-2-amch183",
     "https://charteryacht24.com/en/yacht/catamaran-lola-2/5690"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "reference",
    "source_notes": {
     "charteryacht24": "CY24 календарь: 31.10-09.11:Booked; 08.11-15.11:0 €; 19.11-16.12:Booked",
@@ -356,12 +356,12 @@
     "https://charteryacht24.com/en/yacht/catamaran-maravelle/6908",
     "https://www.yachtreal.com/en/yacht/fountaine-pajot-saona-47-quintet-maravelle-phuket-ao-po-grand-marina-thailand/11348"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:Booked; 14.11-21.11:9.476 € 10.500 € -10%; 21.11-28.11:9.476 € 10.500 € -10%",
     "yachtreal": "YachtReal поиск: 11-14:9476",
-    "boataround": "Boataround search: 11-09:9002 11-10:9002 11-11:9002 11-12:9002 11-13:9002 11-14:9453 11-15:9002 11-16:9002 11-17:9453",
+    "boataround": "Boataround search: 11-09:9002 11-10:9002 11-11:9002 11-12:9453 11-13:9002 11-14:9002 11-15:9002 11-16:9002 11-17:9453",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b 11-10:b 11-11:b 11-12:b 11-13:b 11-14:a:9765.0 11-15:a:9765.0 11-16:a:9765.0 11-17:a:9765.0"
    }
   },
@@ -447,12 +447,12 @@
     "https://www.yachtreal.com/en/yacht/lagoon-42-thai-thunder-phuket-yacht-haven-marina-thailand/6510",
     "https://charter-yacht.com/phuket/"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 03.11-20.11:Booked; 15.11-30.11:Booked [перекрывающиеся Booked-блоки — возможно опция]",
     "yachtreal": "YachtReal поиск: 11-15:7171 11-16:7126 11-17:7126",
-    "boataround": "Boataround search: 11-15:7187 11-16:7225 11-17:7264",
+    "boataround": "Boataround search: 11-15:7187 11-16:7587 11-17:7264",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b:7980.0 11-10:b:7980.0 11-11:b:7980.0 11-12:b:7809.0 11-13:b:7638.0 11-14:b:7524.0 11-15:a:7171.0 11-16:a:7125.0 11-17:a:7125.0",
     "islandspirit": "виджет NauSYS оператора: 11-15:7171 11-16:7126 11-17:7126"
    }
@@ -585,12 +585,12 @@
     "https://charteryacht24.com/en/yacht/catamaran-gull/1302",
     "https://www.yachtreal.com/en/yacht/lagoon-52-f-gull-phuket-yacht-haven-marina-thailand/7758"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 29.10-11.11:Booked; 14.11-21.11:9.966 € 11.725 € -15%; 24.11-28.11:Booked",
     "yachtreal": "YachtReal поиск: 11-14:9966",
-    "boataround": "Boataround search: 11-09:9471 11-10:10049 11-11:10153 11-12:9768 11-13:9867 11-14:9966 11-15:10016 11-16:10066 11-17:10621",
+    "boataround": "Boataround search: 11-09:9471 11-10:9570 11-11:10153 11-12:9768 11-13:9867 11-14:9966 11-15:10016 11-16:10066 11-17:10116",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:o:9471.0 11-10:o:9570.0 11-11:o:9669.0 11-12:o:9768.0 11-13:o:9867.0 11-14:o:9966.0 11-15:o:10016.0 11-16:o:10065.0 11-17:o:10115.0"
    }
   },
@@ -626,7 +626,7 @@
      "from": "2026-11-09",
      "to": "2026-11-16",
      "days": 7,
-     "price_eur": 10179,
+     "price_eur": 10688,
      "source": "boataround"
     },
     {
@@ -640,7 +640,7 @@
      "from": "2026-11-11",
      "to": "2026-11-18",
      "days": 7,
-     "price_eur": 10391,
+     "price_eur": 10911,
      "source": "boataround"
     },
     {
@@ -654,7 +654,7 @@
      "from": "2026-11-13",
      "to": "2026-11-20",
      "days": 7,
-     "price_eur": 11134,
+     "price_eur": 10604,
      "source": "boataround"
     },
     {
@@ -687,7 +687,7 @@
     }
    ],
    "booking_status": "available",
-   "base_price_eur": 10179,
+   "base_price_eur": 10285,
    "base_price_note": "Лист €12,600–12,793, −15% → €10,710–10,873 (14–24.11). Старты 9–13.11 — 'On hold'. Итог с обязательными ≈ €11,215 — выше бюджета на ~€215.",
    "mandatory_extras": [
     {
@@ -718,11 +718,11 @@
     "https://www.boataround.com/boat/fountaine-pajot-saba-50-guiraca",
     "https://www.yachtreal.com/en/yacht/fountaine-pajot-saba-50-guiraca-phuket-yacht-haven-marina-thailand/5939"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: обязательный итог €11,215 > €11,000",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-14:10710 11-15:10765 11-16:10819 11-17:10874",
-    "boataround": "Boataround search: 11-09:10179 11-10:10285 11-11:10391 11-12:10498 11-13:11134 11-14:10710 11-15:10765 11-16:10819 11-17:10874"
+    "boataround": "Boataround search: 11-09:10688 11-10:10285 11-11:10911 11-12:10498 11-13:10604 11-14:10710 11-15:10765 11-16:10819 11-17:10874"
    }
   },
   "fortunate-sun": {
@@ -850,11 +850,11 @@
     "https://www.yachtreal.com/en/yacht/island-spirit-410-fortunate-sun-phuket-yacht-haven-marina-thailand/6506",
     "https://charter-yacht.com/phuket/"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:6200 11-10:6200 11-11:6067 11-12:5934 11-13:5846 11-14:5775 11-15:5722 11-16:5686 11-17:5669",
-    "boataround": "Boataround search: 11-09:5775 11-10:5717 11-11:5659 11-12:5881 11-13:5544 11-14:5486 11-15:5544 11-16:5601 11-17:5659",
+    "boataround": "Boataround search: 11-09:6063 11-10:6003 11-11:5659 11-12:5881 11-13:5544 11-14:5486 11-15:5544 11-16:5601 11-17:5659",
     "islandspirit": "виджет NauSYS оператора: 11-09:6200 11-10:6200 11-11:6067 11-12:5934 11-13:5846 11-14:5775 11-15:5722 11-16:5686 11-17:5669"
    }
   },
@@ -955,11 +955,11 @@
     "https://www.boataround.com/boat/island-spirit-410-melinda-jane",
     "https://charter-yacht.com/phuket/"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:5846 11-10:5775 11-11:5722 11-12:5686 11-13:5669 11-14:6200",
-    "boataround": "Boataround search: 11-09:5800 11-10:5818 11-11:5836 11-12:5854 11-13:5872 11-14:5890",
+    "boataround": "Boataround search: 11-09:5800 11-10:5818 11-11:5836 11-12:5854 11-13:6166 11-14:5890",
     "islandspirit": "виджет NauSYS оператора: 11-09:5846 11-10:5775 11-11:5722 11-12:5686 11-13:5669"
    }
   },
@@ -1083,7 +1083,7 @@
     "https://12knots.com/en/yacht-charter/fountaine-pajot-lucia-40-4-cab-kinara-41221/",
     "https://www.boataround.com/boat/fountaine-pajot-lucia-40-kinara"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "boataround": "Boataround search: 11-09:5845 11-10:5845 11-11:5845 11-12:5845 11-13:5845 11-14:5845"
@@ -1185,7 +1185,7 @@
     "https://charteryacht24.com/en/yacht/catamaran-proclus-db/2029",
     "https://www.boataround.com/boat/bali-45-proclus"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:5.563 € 6.545 € -15%; 17.11-30.11:Booked",
@@ -1272,12 +1272,12 @@
     "https://www.yachtreal.com/en/yacht/bali-41-cotinga-phuket-yacht-haven-marina-thailand/5940",
     "https://www.boataround.com/boat/bali-41-cotinga"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: 8 berths",
    "source_notes": {
     "charteryacht24": "CY24 календарь: 31.10-13.11:Booked; 19.11-04.12:Booked",
     "yachtreal": "YachtReal поиск: 11-10:7031",
-    "boataround": "Boataround search: 11-10:6770 11-11:6665 11-12:6884",
+    "boataround": "Boataround search: 11-10:6447 11-11:6665 11-12:6884",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b:6959.0 11-10:a:7031.0 11-11:a:7103.0 11-12:a:7175.0 11-13:b:7247.0 11-14:b:7320.0 11-15:b:7357.0 11-16:b:7395.0 11-17:b:7433.0"
    }
   },
@@ -1328,7 +1328,7 @@
     "https://phuket-sailing-charter.com/bareboat-lagoon-450s-myemocean/",
     "https://charteryacht24.com/en/yacht/catamaran-myemocean/6824"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-16.11:Booked; 17.11-02.12:Booked",
@@ -1382,7 +1382,7 @@
     "https://12knots.com/en/yacht-charter/lagoon-42-4-2-cab-mami-38200/",
     "https://charteryacht24.com/en/yacht/catamaran-mami/4233"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 31.10-15.11:Booked; 17.11-02.12:Booked",
@@ -1437,7 +1437,7 @@
     "https://12knots.com/en/yacht-charter/bali-45-4-2-cab-sparrow-27469/",
     "https://charteryacht24.com/en/yacht/catamaran-sparrow/1251"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 31.10-13.11:Booked; 11.11-18.11:Booked; 21.11-28.11:Booked [перекрывающиеся Booked-блоки — возможно опция]",
@@ -1497,11 +1497,11 @@
     "https://charteryacht24.com/en/yacht/catamaran-k-35/3682",
     "https://www.boataround.com/boat/lagoon-40-k-35"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:Booked; 14.11-05.12:Booked",
-    "boataround": "Boataround search: 11-09:5281 11-10:5281 11-11:5546 11-12:5281 11-13:5281 11-14:5281 11-15:5281 11-16:5281 11-17:5281",
+    "boataround": "Boataround search: 11-09:5281 11-10:5281 11-11:5546 11-12:5546 11-13:5281 11-14:5281 11-15:5281 11-16:5281 11-17:5546",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b:5559.0 11-10:b:5559.0 11-11:b:5559.0 11-12:b:5559.0 11-13:b:5559.0 11-14:b:5559.0 11-15:b:5559.0 11-16:b:5559.0 11-17:b:5559.0"
    }
   },
@@ -1552,11 +1552,11 @@
     "https://charteryacht24.com/en/yacht/catamaran-cloud-dancer/3684",
     "https://www.boataround.com/boat/lagoon-42-cloud-dancer"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:Booked; 15.11-22.11:Booked",
-    "boataround": "Boataround search: 11-09:5911 11-10:5911 11-11:5911 11-12:5911 11-13:5911 11-14:5911 11-15:6206 11-16:5911 11-17:5911",
+    "boataround": "Boataround search: 11-09:5911 11-10:5911 11-11:5911 11-12:5911 11-13:5911 11-14:6206 11-15:5911 11-16:5911 11-17:5911",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b:6221.0 11-10:b:6221.0 11-11:b:6221.0 11-12:b:6221.0 11-13:b:6221.0 11-14:b:6221.0 11-15:b:6221.0 11-16:b:6221.0 11-17:b:6221.0"
    }
   },
@@ -1607,11 +1607,11 @@
     "https://charteryacht24.com/en/yacht/catamaran-cloud-dancer-2/6595",
     "https://www.boataround.com/boat/lagoon-43-cloud-dancer-2"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 03.11-18.11:Booked; 14.11-25.11:Booked; 23.11-28.11:0 € [перекрывающиеся Booked-блоки — возможно опция]",
-    "boataround": "Boataround search: 11-09:8234 11-10:8234 11-11:8234 11-12:8234 11-13:8234 11-14:8234 11-15:8234 11-16:8234 11-17:8234",
+    "boataround": "Boataround search: 11-09:8234 11-10:8646 11-11:8234 11-12:8234 11-13:8234 11-14:8646 11-15:8646 11-16:8234 11-17:8234",
     "12knots": "12knots onChangeDate (a=available,o=on hold,b=booked; EUR client): 11-09:b:8667.0 11-10:b:8667.0 11-11:b:8667.0 11-12:b:8667.0 11-13:b:8667.0 11-14:b:8667.0 11-15:b:8667.0 11-16:b:8667.0 11-17:b:8667.0"
    }
   },
@@ -1697,7 +1697,7 @@
     "https://charteryacht24.com/en/yacht/catamaran-joyous/5694",
     "https://www.boataround.com/boat/bali-42-joyous"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: 8 berths",
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:8.400 €; 16.11-25.11:Booked; 24.11-09.12:Booked [перекрывающиеся Booked-блоки — возможно опция]",
@@ -1901,7 +1901,7 @@
     "https://12knots.com/en/yacht-charter/fountaine-pajot-elba-45-4-2-cab-shavasan-38420/",
     "https://charteryacht24.com/en/yacht/catamaran-shavasan/4337"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 17.10-09.11:Booked; 01.11-12.11:Booked; 10.11-19.11:Booked; 21.11-14.12:Booked [перекрывающиеся Booked-блоки — возможно опция]",
@@ -1958,7 +1958,7 @@
    "urls": [
     "https://charter-yacht.com/yacht-34636231/"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "islandspirit": "виджет NauSYS оператора: не выдана ни в одном из 9 окон → занята"
@@ -2133,7 +2133,7 @@
     "https://www.yachtreal.com/en/yacht/fountaine-pajot-elba-45-chammak-challo-phuket-yacht-haven-marina-thailand/9240",
     "https://charter-yacht.com/phuket/"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: 3 гостевые каюты, crewed-only",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-14:8973 11-15:9099 11-16:9043 11-17:9015",
@@ -2256,7 +2256,7 @@
     "https://www.yachtreal.com/en/yacht/leopard-50-ms-chief-phuket-ao-po-grand-marina-thailand/10671",
     "https://www.boataround.com/boat/leopard-50-ms-chief"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: обязательный шкипер, 8 berths, итог > бюджета",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:10850 11-10:10850 11-11:10850 11-12:10850 11-13:10850 11-14:10850 11-15:10850 11-16:10850 11-17:10850",
@@ -2382,7 +2382,7 @@
     "https://12knots.com/en/yacht-charter/lagoon-52-f-4-2-cab-sealion-41276/",
     "https://www.yachtreal.com/en/yacht/lagoon-52-f-sealion-phuket-yacht-haven-marina-thailand/12205"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: > бюджета",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:13500 11-10:13500 11-11:13500 11-12:13500 11-13:13500 11-14:13500 11-15:13500 11-16:13500 11-17:13500"
@@ -2475,10 +2475,10 @@
     "https://www.boataround.com/boat/leopard-45-sunsail-24-6",
     "https://www.sunsail.com/yacht-charter/thailand/phuket/build-my-quote"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: > бюджета",
    "source_notes": {
-    "boataround": "Boataround search: 11-09:16099 11-10:16642 11-11:16519 11-12:16729 11-13:16939 11-14:15925",
+    "boataround": "Boataround search: 11-09:16428 11-10:16309 11-11:16519 11-12:17070 11-13:17285 11-14:16721",
     "sunsail_moorings": "sunsail API 7 ночей, USD→EUR 0.86044 (frankfurter.dev): 11-09:46X4E:$18224→€15681 11-10:46X4E:$18860→€16227 11-11:46X4E:$18899→€16262 11-12:46X4E:$18899→€16262 11-13:46X4E:$19486→€16766 11-14:46X4E:$19574→€16842"
    }
   },
@@ -2569,7 +2569,7 @@
     "https://www.boataround.com/boat/leopard-45-moorings-23-6",
     "https://www.moorings.com/destinations/exotics/thailand-yacht-charters/build-my-quote"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: > бюджета",
    "source_notes": {
     "boataround": "Boataround search: 11-09:18285 11-10:18428 11-11:18570 11-12:18713 11-13:18856 11-14:18154",
@@ -2749,7 +2749,7 @@
     "https://charteryacht24.com/en/yacht/lipari-41-lady-alla-phuket-ao-po-grand-marina-thailand/7974",
     "https://www.yachtreal.com/en/yacht/lipari-41-lady-alla-phuket-ao-po-grand-marina-thailand/12843"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: 41 ft/2 WC, цена вне рынка",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:10800 11-10:10800 11-11:10800 11-12:10800 11-13:10800 11-14:10800 11-15:10800 11-16:10800 11-17:10800"
@@ -2876,7 +2876,7 @@
     "https://www.yachtreal.com/en/yacht/matrix-vision-450-leopard-phuket-yacht-haven-marina-thailand/10128",
     "https://www.boataround.com/boat/matrix-vision-450-kristy-b"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": "rejected: 8 berths",
    "source_notes": {
     "yachtreal": "YachtReal поиск: 11-09:8000 11-10:8000 11-11:8000 11-12:8000 11-13:8000 11-14:8000 11-15:8000 11-16:8000 11-17:8000",
@@ -2928,7 +2928,7 @@
     "https://charter-yacht.com/yacht-34636228/",
     "https://charteryacht24.com/en/yacht/catamaran-kaya/4232"
    ],
-   "timestamp": "2026-09-06T20:03:24Z",
+   "timestamp": "2026-09-06T16:04:09Z",
    "role": null,
    "source_notes": {
     "charteryacht24": "CY24 календарь: 07.11-14.11:7.160 €; 14.11-29.11:Booked",
