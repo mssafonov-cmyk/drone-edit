@@ -1,0 +1,642 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-09-06T07:00:00Z",
+ "run_id": "baseline-2026-09-06",
+ "window": {
+  "from": "2026-11-09",
+  "to": "2026-11-24"
+ },
+ "budget_eur": 11000,
+ "sources_checked": {
+  "web_search_snippets": "ok",
+  "charter.boats": "blocked (403 из обеих сред)",
+  "charteryacht24": "blocked (среда Default)",
+  "yachtreal": "blocked (среда Default)",
+  "nausys": "blocked (среда Default)"
+ },
+ "boats": {
+  "lola-2": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "7piers: от €4,276/нед (сезон не указан); searadar/boataround — цена по датам, не проверена",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": true,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "solar": true,
+    "large_fridge": true,
+    "flybridge_or_good_cockpit": true
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "catamarans.com": "36800",
+    "boataround": "fountaine-pajot-saona-47-lola-2",
+    "asia_marine": "amch183"
+   },
+   "urls": [
+    "http://asia-marine.net/charter/bareboat/catamaran/overnight/saona-47-lola-2-amch183",
+    "https://www.boataround.com/boat/fountaine-pajot-saona-47-lola-2",
+    "https://7piers.com/yachts/detail/fountaine-pajot-saona-47-5-cab-lola-2/",
+    "https://searadar.com/yacht/details/fountaine-pajot-saona-47-lola-2"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Fountaine Pajot Saona 47",
+   "yacht_name": "Lola 2",
+   "year": 2018,
+   "length_ft": 47,
+   "guest_cabins_double": 4,
+   "extra_cabins": "1 bunk (2 места)",
+   "total_berths_incl_saloon": 12,
+   "toilets": 5,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Asia Marine",
+   "watermaker": true,
+   "role": "reference"
+  },
+  "karysta": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "12knots: от $5,603/нед; virginislandsailing: bareboat rate €9,000 (сезон?). Депозит ~$10,445 на месте",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": 9600,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "flybridge_or_good_cockpit": true
+   },
+   "penalties": [
+    {
+     "reason": "52 ft — тяжелее для bareboat, очень большой депозит",
+     "points": 6
+    }
+   ],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "nausys_yacht": "10229036",
+    "12knots": "28603",
+    "dyc": "lagoon-52-f-6-2-cab-23"
+   },
+   "urls": [
+    "https://12knots.com/en/yacht-charter/lagoon-52-f-6-2-cab/karysta-nau10229036/",
+    "https://www.dreamyachtcharter.com/yachts/thailand/lagoon-52-f-6-2-cab-23/",
+    "https://www.boataround.com/boat/lagoon-52-f-karysta"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 52 F",
+   "yacht_name": "KARYSTA",
+   "year": 2019,
+   "length_ft": 52,
+   "guest_cabins_double": 6,
+   "extra_cabins": "2 forepeak/crew",
+   "total_berths_incl_saloon": 12,
+   "toilets": 6,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Dream Yacht Charter",
+   "watermaker": true,
+   "role": "reference"
+  },
+  "gull": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "boatbookings pid163117; цена не найдена",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": null,
+    "air_conditioning": null
+   },
+   "penalties": [
+    {
+     "reason": "52 ft",
+     "points": 6
+    }
+   ],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "boatbookings": "pid163117",
+    "boataround": "lagoon-52-f-gull"
+   },
+   "urls": [
+    "https://www.boatbookings.com/yacht/lagoon-52-bareboat-catamaran-pid163117",
+    "https://www.boataround.com/us/boat/lagoon-52-f-gull",
+    "https://yachtwarriors.com/yachts/gull-lagoon-52-f-thailand"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 52 F",
+   "yacht_name": "GULL",
+   "year": 2019,
+   "length_ft": 52,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2 bunk",
+   "total_berths_incl_saloon": 12,
+   "toilets": 6,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "неизвестен (Boatbookings/Boataround/YachtWarriors)",
+   "watermaker": true
+  },
+  "myemocean": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "12knots: от $5,911/нед; депозит $5,716 / €5,500 (yacht4less)",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": 5500,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "solar": true
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "nausys_yacht": "34636232",
+    "boatbookings": "pid38690"
+   },
+   "urls": [
+    "https://12knots.com/en/yacht-charter/lagoon-450-s-4-2-cab/myemocean-nau34636232/",
+    "https://www.charter-yacht.com/en/boat-details/Lagoon-450-S-Myemocean.html",
+    "https://yacht4less.com/boat-rental/phuket-yacht-heaven-marina/lagoon-450-s/myemocean-34636232",
+    "https://www.sweetdreamerscharter.com/lagoon-450-s---myemocean"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 450 S",
+   "yacht_name": "Myemocean",
+   "year": 2019,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2 forepeak",
+   "total_berths_incl_saloon": 12,
+   "toilets": 4,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Elite Charters (charter-yacht.com) / NauSYS 34636232",
+   "watermaker": true
+  },
+  "ecstasy": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "Fairview: €5,600 (май–окт 2025) … €15,050 (пик); 12knots: от $6,357/нед; ноябрь 2026 — не найдено. Год 2018 или 2019 по разным источникам",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": true,
+   "equipment": {
+    "generator": null,
+    "air_conditioning": true
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "12knots": "61664",
+    "catamarans.com": "60636",
+    "yacht4less": "59802527"
+   },
+   "urls": [
+    "https://www.fairviewsailing.co.uk/phuket/fountaine-pajot-47-saona-ecstasy/",
+    "https://www.simpsonyachtcharter.com/charter/fountaine-pajot-saona-47-ecstasy/",
+    "https://12knots.com/en/yacht-charter/saona-47/ecstacy-sed60636/"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Fountaine Pajot Saona 47",
+   "yacht_name": "Ecstasy",
+   "year": 2019,
+   "length_ft": 47,
+   "guest_cabins_double": 4,
+   "extra_cabins": "1 twin bunk",
+   "total_berths_incl_saloon": 10,
+   "toilets": 5,
+   "base": "Ao Po Grand Marina, Phuket (уточнить)",
+   "operator": "Simpson Yacht Charter / Fairview Yachting",
+   "watermaker": true
+  },
+  "sparrow": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": null,
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": true,
+   "equipment": {
+    "electric_winch": true,
+    "generator": null,
+    "air_conditioning": null
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "yachtic": "39465",
+    "samboat": "137666"
+   },
+   "urls": [
+    "https://yachtic.com/bali-45-4-2-cab-sparrow",
+    "https://www.boataround.com/boat/bali-45-sparrow",
+    "https://www.samboat.co.uk/boat-hire/mai-khao/catamaran/137666"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Bali 4.5",
+   "yacht_name": "SPARROW",
+   "year": 2019,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2 single",
+   "total_berths_incl_saloon": 12,
+   "toilets": null,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "неизвестен (yachtic 39465)",
+   "watermaker": true
+  },
+  "mami": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "12knots: от $4,795/нед; депозит $4,186. Внимание: 8 berths по 12knots — проверить, разрешено ли 9 с салоном",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": 3900,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "nausys_yacht": "34636229",
+    "mmk": "17999430786700260",
+    "boatbookings": "pid40815"
+   },
+   "urls": [
+    "https://12knots.com/en/yacht-charter/lagoon-42-4-2-cab/mami-nau34636229/",
+    "https://www.sweetdreamerscharter.com/lagoon-42---mami",
+    "https://www.velmundi.com/lagoon-42-mami.html"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 42",
+   "yacht_name": "Mami",
+   "year": 2018,
+   "length_ft": 42,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2 forepeak",
+   "total_berths_incl_saloon": 8,
+   "toilets": 4,
+   "base": "Phuket (Yacht Haven?)",
+   "operator": "NauSYS 34636229 / MMK 17999430786700260 (Elite Charters?)",
+   "watermaker": true
+  },
+  "alceste": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "цена по запросу; мин. 7 ночей",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {
+    "air_conditioning": true
+   },
+   "penalties": [
+    {
+     "reason": "2015 год",
+     "points": 5
+    }
+   ],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.sweetdreamerscharter.com/bali-4-5---alceste"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Bali 4.5",
+   "yacht_name": "Alceste",
+   "year": 2015,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2",
+   "total_berths_incl_saloon": null,
+   "toilets": 4,
+   "base": "Phuket",
+   "operator": "Sweet Dreamers (брокер)",
+   "watermaker": true
+  },
+  "k35": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": null,
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true
+   },
+   "penalties": [
+    {
+     "reason": "40 ft — ниже желаемого диапазона",
+     "points": 4
+    }
+   ],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.boatbookings.com/yacht/lagoon-40-lagoon-40-bareboat-catamaran-pid47077",
+    "https://phuket-sailing-charter.com/bareboat-lagoon-40-k35/"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 40",
+   "yacht_name": "K35",
+   "year": null,
+   "length_ft": 40,
+   "guest_cabins_double": 4,
+   "extra_cabins": "2",
+   "total_berths_incl_saloon": null,
+   "toilets": null,
+   "base": "Phuket",
+   "operator": "неизвестен (phuket-sailing-charter.com)",
+   "watermaker": true
+  },
+  "chammak-challo": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": 11900,
+   "base_price_note": "€11,900–16,550/нед по сезонам (barbera-yachting), ноябрь не указан",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": true,
+   "deposit_eur": null,
+   "saloon_berth": true,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true,
+    "inverter": true
+   },
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {
+    "nausys_yacht": "46951264",
+    "12knots": "41274"
+   },
+   "urls": [
+    "https://12knots.com/en/yacht-charter/fountaine-pajot-elba-45-3-2-cab/chammak-chalo-nau46951264/",
+    "https://barbera-yachting.de/en/yacht/38175"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Fountaine Pajot Elba 45",
+   "yacht_name": "Chammak Challo",
+   "year": 2024,
+   "length_ft": 45,
+   "guest_cabins_double": 3,
+   "extra_cabins": "1 single + 2 forepeak",
+   "total_berths_incl_saloon": 10,
+   "toilets": null,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "частный владелец / NauSYS 46951264",
+   "watermaker": true,
+   "role": "rejected: 3 гостевые каюты, цена > €11,000"
+  },
+  "moorings-4500l-phuket": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "цены по датам на moorings.com; Exclusive vs Club class",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true
+   },
+   "penalties": [],
+   "operator_rating": 8,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.moorings.com/yachts/sail-fleet/catamarans/4500l-4-cabin",
+    "https://www.bebluesailing.com/en/boat-charter/moorings-4500l-nn-phuket-ao-po-grand-marina-thailand/312015"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Moorings 4500L (Leopard 45)",
+   "yacht_name": "(флот, без имени)",
+   "year": 2023,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": "1 forepeak",
+   "total_berths_incl_saloon": 10,
+   "toilets": 4,
+   "base": "Ao Po Grand Marina, Phuket",
+   "operator": "The Moorings",
+   "watermaker": true
+  },
+  "sunsail-454l-phuket": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "$6,650 (низкий сезон) … $22,190 (высокий); ноябрь — уточнить на sunsail.com",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {
+    "generator": true,
+    "air_conditioning": true
+   },
+   "penalties": [],
+   "operator_rating": 8,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.sunsail.com/yachts/catamarans/sunsail-454l",
+    "https://www.bebluesailing.com/en/boat-charter/sunsail-454l-nn-ao-po-grand-marina-phuket-thailand/311469"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Sunsail 454L (Leopard 45)",
+   "yacht_name": "(флот, без имени)",
+   "year": 2022,
+   "length_ft": 45,
+   "guest_cabins_double": 4,
+   "extra_cabins": "1 forepeak",
+   "total_berths_incl_saloon": 11,
+   "toilets": 4,
+   "base": "Ao Po Grand Marina, Phuket",
+   "operator": "Sunsail",
+   "watermaker": true
+  },
+  "dyc-bali-4-8-thailand": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "DYC: даты с сент. 2026; цена и watermaker не проверены; вероятно > бюджета",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {},
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.dreamyachtcharter.com/yachts/thailand/bali-4-8-6-cab/"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Bali 4.8",
+   "yacht_name": "(DYC Thailand)",
+   "year": 2020,
+   "length_ft": 48,
+   "guest_cabins_double": 6,
+   "total_berths_incl_saloon": 12,
+   "toilets": 6,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "Dream Yacht Charter",
+   "watermaker": null
+  },
+  "lagoon-52f-2016-yacht-haven": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": null,
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {},
+   "penalties": [
+    {
+     "reason": "2016 год, 52 ft",
+     "points": 8
+    }
+   ],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.samboat.com/catamaran-rental/phuket-thailand"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 52 F",
+   "yacht_name": "(SamBoat, 2016, возможно COLOMBO)",
+   "year": 2016,
+   "length_ft": 52,
+   "guest_cabins_double": 6,
+   "total_berths_incl_saloon": 14,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "неизвестен",
+   "watermaker": null
+  },
+  "lagoon-51-2025-yacht-haven": {
+   "type": "catamaran",
+   "bareboat": true,
+   "verified": false,
+   "verification_note": "Только индексированные страницы / поисковые сниппеты (сеть из среды заблокирована). Доступность и цена на ноябрь 2026 НЕ подтверждены.",
+   "available_dates": [],
+   "booking_status": "unknown",
+   "base_price_eur": null,
+   "base_price_note": "почти наверняка > €11,000; кандидат только на PREMIUM DEAL",
+   "mandatory_extras": [],
+   "mandatory_extras_complete": false,
+   "deposit_eur": null,
+   "saloon_berth": null,
+   "equipment": {},
+   "penalties": [],
+   "operator_rating": null,
+   "condition_score": null,
+   "source_ids": {},
+   "urls": [
+    "https://www.samboat.com/catamaran-rental/phuket-thailand"
+   ],
+   "timestamp": "2026-09-06T07:00:00Z",
+   "model": "Lagoon 51",
+   "yacht_name": "(SamBoat, 2025)",
+   "year": 2025,
+   "length_ft": 51,
+   "guest_cabins_double": 6,
+   "total_berths_incl_saloon": 13,
+   "base": "Yacht Haven Marina, Phuket",
+   "operator": "неизвестен",
+   "watermaker": null
+  }
+ }
+}
