@@ -141,6 +141,9 @@ def detect(prev, cur):
             elif not slots_in_window(p) and slots_in_window(b) and p.get("verified") \
                     and p.get("booking_status") in ("booked", "option"):
                 events.append(("RELEASED", bid, sc, "появились даты внутри 9–24 ноября"))
+            elif p.get("booking_status") == "option" and b.get("booking_status") == "available" \
+                    and b.get("verified"):
+                events.append(("RELEASED", bid, sc, "снята опция (on hold → available)"))
             pt, _ = total_price(p)
             if pt and total:
                 if total <= pt * (1 - PRICE_DROP_PCT):
