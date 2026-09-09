@@ -29,6 +29,6 @@
   "boataround api search",
   "12knots destination list"
  ],
- "last_discovery": "2026-09-08T0804Z",
+ "last_discovery": "2026-09-09T0804Z",
  "discovery_note": "CY24 список катамаранов: серверный рендер отдаёт 404 (контент JS), поиск с датами — 500; discovery по CY24 недоступен без браузера. YachtReal/Boataround/12knots — discovery встроен в фетчеры (new:<slug>)."
 }
