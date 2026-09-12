@@ -10,6 +10,7 @@
 "на глаз" решать, было ли событие.
 """
 import json
+import os
 import sys
 from datetime import date
 
@@ -19,6 +20,31 @@ PRICE_DROP_PCT = 0.07
 PREMIUM_MODELS = ("elba 45", "saona 47", "lagoon 46", "lagoon 50", "lagoon 51",
                   "bali 4.6", "bali 4.8", "bali 5.4", "lagoon 450", "aura 51", "tanna 47")
 REFERENCE_IDS = ("lola-2", "karysta")
+WATCHLIST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state", "watchlist.json")
+
+
+def held():
+    """Удерживаемая (забронированная нами) лодка из watchlist.json → dict или None.
+
+    Для неё логика инвертирована: занятое окно — норма, освободившееся окно —
+    сигнал тревоги HOLD_LOST (опция слетела), а не хорошая новость RELEASED.
+    """
+    try:
+        h = json.load(open(WATCHLIST)).get("held")
+    except (OSError, ValueError):
+        return None
+    return h if h and h.get("boat_id") and h.get("window") else None
+
+
+def hold_free(boat, win):
+    """Окно удержания снова выглядит доступным у источников?"""
+    if boat.get("booking_status") in ("available", "option"):
+        for slot in boat.get("available_dates", []):
+            if slot.get("from") == win["from"] and slot.get("to") == win["to"]:
+                return True, f"окно {win['from']}…{win['to']} снова в выдаче как свободное"
+        if boat.get("booking_status") == "available" and not boat.get("available_dates"):
+            return False, ""
+    return False, ""
 
 
 def d(s):
@@ -117,6 +143,13 @@ def is_candidate(boat):
 def detect(prev, cur):
     events = []
     pb, cb = prev.get("boats", {}), cur.get("boats", {})
+    h = held()
+    hid = h["boat_id"] if h else None
+    if h and hid in cb:
+        free, why = hold_free(cb[hid], h["window"])
+        was_free, _ = hold_free(pb.get(hid, {}), h["window"]) if hid in pb else (False, "")
+        if free and not was_free:
+            events.append(("HOLD_LOST", hid, score(cb[hid]), why))
     # Baseline без верифицированных лодок: любое "появление" — заполнение, а не событие.
     if not any(b.get("verified") for b in pb.values()):
         return events
@@ -124,6 +157,8 @@ def detect(prev, cur):
     top_prev = max(prev_leaders) if prev_leaders else 0
 
     for bid, b in cb.items():
+        if bid == hid:
+            continue  # удерживаемая лодка — только через HOLD_LOST выше
         if not is_candidate(b):
             continue
         sc = score(b)
@@ -161,6 +196,24 @@ def detect(prev, cur):
                 and (p is None or (total_price(p)[0] or 1e9) > BUDGET_EUR):
             events.append(("PREMIUM_DEAL", bid, sc, f"{b.get('model')} {b.get('year')} за €{total:,.0f}"))
     return events
+
+
+def draft_hold_lost(boat, why, win):
+    return "\n".join([
+        "🚨 HOLD LOST — опция на нашу лодку больше не держится",
+        "",
+        f"{boat.get('model')} — {boat.get('yacht_name')} ({boat.get('year')})",
+        f"Окно удержания: {win['from']} … {win['to']}",
+        f"Оператор: {boat.get('operator')}",
+        "",
+        f"Что видно: {why}",
+        f"Статус у источников: {boat.get('booking_status')}",
+        "",
+        "Это НЕ хорошая новость: лодку, которую мы держим, могут перехватить.",
+        "Recommendation: немедленно связаться с оператором и подтвердить опцию/оплату.",
+        "Sources:",
+        *[f"- {u}" for u in boat.get("urls", [])[:4]],
+    ])
 
 
 def draft(kind, boat, sc, why):
@@ -207,8 +260,12 @@ def main():
     else:
         if not events:
             print("Существенных событий нет.")
+        h = held()
         for k, b, s, w in events:
-            print(draft(k, cur["boats"][b], s, w))
+            if k == "HOLD_LOST":
+                print(draft_hold_lost(cur["boats"][b], w, h["window"]))
+            else:
+                print(draft(k, cur["boats"][b], s, w))
             print("\n" + "-" * 40 + "\n")
     sys.exit(0 if events else 3)
 
