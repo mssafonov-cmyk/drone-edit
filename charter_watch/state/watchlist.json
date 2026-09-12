@@ -29,7 +29,7 @@
     "boataround api search",
     "12knots destination list"
   ],
-  "last_discovery": "2026-09-11T0823Z",
+  "last_discovery": "2026-09-12T1222Z",
   "discovery_note": "CY24 список катамаранов: серверный рендер отдаёт 404 (контент JS), поиск с датами — 500; discovery по CY24 недоступен без браузера. YachtReal/Boataround/12knots — discovery встроен в фетчеры (new:<slug>).",
   "held": {
     "boat_id": "karysta",
