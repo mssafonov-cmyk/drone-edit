@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T1233Z",
+  "updated": "2026-09-14T1233Z",
   "note": "Лодки, которые проверяются ВРУЧНУЮ каждый прогон, если для их источника нет фетчера. Остальные — только скриптом и discovery раз в сутки.",
   "priority": [
     "karysta",
@@ -29,7 +29,7 @@
     "boataround api search",
     "12knots destination list"
   ],
-  "last_discovery": "2026-09-13T1233Z",
+  "last_discovery": "2026-09-14T1233Z",
   "discovery_note": "CY24 список катамаранов: серверный рендер отдаёт 404 (контент JS), поиск с датами — 500; discovery по CY24 недоступен без браузера. YachtReal/Boataround/12knots — discovery встроен в фетчеры (new:<slug>).",
   "held": {
     "boat_id": "karysta",
