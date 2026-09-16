@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T1233Z",
+  "updated": "2026-09-16T1300Z",
   "note": "Лодки, которые проверяются ВРУЧНУЮ каждый прогон, если для их источника нет фетчера. Остальные — только скриптом и discovery раз в сутки.",
   "priority": [
     "karysta",
@@ -31,19 +31,24 @@
   ],
   "last_discovery": "2026-09-14T1233Z",
   "discovery_note": "CY24 список катамаранов: серверный рендер отдаёт 404 (контент JS), поиск с датами — 500; discovery по CY24 недоступен без браузера. YachtReal/Boataround/12knots — discovery встроен в фетчеры (new:<slug>).",
-  "held": {
+  "hold_released": {
     "boat_id": "karysta",
-    "yacht_name": "KARYSTA",
-    "model": "Lagoon 52 F",
-    "window": {
-      "from": "2026-11-09",
-      "to": "2026-11-16",
-      "days": 7
-    },
-    "status": "option_unpaid",
-    "note": "Опция поставлена пользователем, НЕ оплачена. Подтверждено 12.09: 12knots (NauSYS) booked на 09-16.11, CY24 календарь содержит блок 09.11-16.11:Booked. Блок впервые зафиксирован прогоном 2026-09-10T16:22Z.",
-    "blocked_since_run": "2026-09-10T1622Z",
-    "base_price_eur_at_hold": 9471,
-    "confirmed_run": "2026-09-12T0423Z"
+    "released_at": "2026-09-16T1300Z",
+    "reason": "Пользователь сообщил: чартер оплачен. Мониторинг KARYSTA остановлен, расписание удалено.",
+    "prev_held": {
+      "boat_id": "karysta",
+      "yacht_name": "KARYSTA",
+      "model": "Lagoon 52 F",
+      "window": {
+        "from": "2026-11-09",
+        "to": "2026-11-16",
+        "days": 7
+      },
+      "status": "option_unpaid",
+      "note": "Опция поставлена пользователем, НЕ оплачена. Подтверждено 12.09: 12knots (NauSYS) booked на 09-16.11, CY24 календарь содержит блок 09.11-16.11:Booked. Блок впервые зафиксирован прогоном 2026-09-10T16:22Z.",
+      "blocked_since_run": "2026-09-10T1622Z",
+      "base_price_eur_at_hold": 9471,
+      "confirmed_run": "2026-09-12T0423Z"
+    }
   }
 }
